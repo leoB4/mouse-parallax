@@ -29,8 +29,8 @@ else {
     function mouseParallax (e){
         this.querySelectorAll('.moParallax').forEach(moParallax =>{
             let speed = moParallax.getAttribute('data-speed')
-            let x = (window.innerWidth - e.pageX * speed)/100
-            let y = (window.innerWidth - e.pageY *speed)/100
+            let x = (window.innerWidth - e.clientX * speed)/100
+            let y = (window.innerWidth - e.clientY *speed)/100
 
             moParallax.style.transform = `translateX(${x}px) translateY(${y}px)`
         })
